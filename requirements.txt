@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+mcp
+requests
+faiss-cpu==1.13.2
+langchain==1.2.9
+langchain-community==0.4.1
+langchain-core==1.2.9
+langchain-google-genai==4.2.0
+langchain-groq==1.1.2
+python-dotenv==1.2.1
+pydantic
+sentence-transformers==5.2.2
