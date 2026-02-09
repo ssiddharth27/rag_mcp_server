@@ -13,8 +13,7 @@ from amadeus import Client
 # 1. DEVELOPER KEYS (HARDCODED FOR DEPLOYMENT)
 # ==============================================================================
 
-st.set_page_config(page_title="NomadAI", layout="wide")
-
+st.set_page_config(page_title="NomadAI | Travel Planner", page_icon="🌍", layout="wide")
 # --- HIDE STREAMLIT STYLE ---
 hide_st_style = """
             <style>
@@ -44,7 +43,7 @@ def get_booking_link(origin, dest, date):
 # ==============================================================================
 # 2. UI STYLING
 # ==============================================================================
-st.set_page_config(page_title="NomadAI | Travel Planner", page_icon="🌍", layout="wide")
+#st.set_page_config(page_title="NomadAI | Travel Planner", page_icon="🌍", layout="wide")
 st.markdown("""
 <style>
    .stApp { background: linear-gradient(to right, #0f2027, #203a43, #2c5364); color: white; }
@@ -211,4 +210,5 @@ if st.button("🚀 Plan Trip"):
        result = crew.kickoff()
        st.markdown("---")
        st.markdown(result)
+
 
