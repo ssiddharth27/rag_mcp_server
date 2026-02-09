@@ -13,6 +13,20 @@ from amadeus import Client
 # 1. DEVELOPER KEYS (HARDCODED FOR DEPLOYMENT)
 # ==============================================================================
 
+st.set_page_config(page_title="NomadAI", layout="wide")
+
+# --- HIDE STREAMLIT STYLE ---
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
+# ... rest of your app code ...
+
 AIRLINE_MAP = {
    "AI": "Air India", "UK": "Vistara", "6E": "IndiGo", "QP": "Akasa Air", "SG": "SpiceJet",
    "QR": "Qatar Airways", "EK": "Emirates", "EY": "Etihad", "BA": "British Airways",
@@ -197,3 +211,4 @@ if st.button("🚀 Plan Trip"):
        result = crew.kickoff()
        st.markdown("---")
        st.markdown(result)
+
